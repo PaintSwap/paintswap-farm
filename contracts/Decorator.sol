@@ -380,7 +380,7 @@ contract Decorator is Ownable {
     }
 
     function setBrushPerSecondEmissionRate(uint256 _brushPerSecond) public onlyOwner {
-        // This MUST be done or pool rewards will be calculated with new boo per second.
+        // This MUST be done or pool rewards will be calculated with new BRUSH per second.
         // This could unfairly punish small pools that dont have frequent deposits/withdraws/harvests.
         massUpdatePools();
         brushPerSecond = _brushPerSecond;
